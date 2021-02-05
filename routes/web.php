@@ -23,3 +23,11 @@ $router->post('/member', 'MemberController@store');
 $router->get('/member/{id}', 'MemberController@show');
 $router->put('/member/{id}', 'MemberController@update');
 $router->delete('/member/{id}', 'MemberController@destroy');
+
+// Soal no 3
+
+$router->get('courses', 'FirebaseCrudController@index');
+$router->post('course', 'FirebaseCrudController@store');
+$router->get('course/{id}', 'FirebaseCrudController@show');
+$router->put('course/{id}', 'FirebaseCrudController@update');
+$router->delete('course/{id}', 'FirebaseCrudController@destroy');
