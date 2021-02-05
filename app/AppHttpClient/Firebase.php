@@ -13,11 +13,11 @@ class Firebase
 
     public function __construct( string $table)
     {
-    
         $this->table = $table;
-    
         $this->client = new Client([
             'base_uri' => env('FIREBASE_URI')]);
+
+
     }
 
     private function response($response)
@@ -49,5 +49,6 @@ class Firebase
     {
         return $this->response($this->client->request('DELETE', $this->table . '/' . $id . '.json'));
     }
+
 
 }

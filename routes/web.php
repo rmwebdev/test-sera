@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\IntegrasiController;
+
 /** @var \Laravel\Lumen\Routing\Router $router */
 
 /*
@@ -31,3 +33,9 @@ $router->post('course', 'FirebaseCrudController@store');
 $router->get('course/{id}', 'FirebaseCrudController@show');
 $router->put('course/{id}', 'FirebaseCrudController@update');
 $router->delete('course/{id}', 'FirebaseCrudController@destroy');
+
+// Soal no 6
+
+$router->post('register', 'IntegrasiController@register');
+$router->post('login', 'IntegrasiController@login');
+$router->get('filter', 'IntegrasiController@filter');
