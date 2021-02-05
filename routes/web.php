@@ -16,3 +16,10 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+// Soal no 1.
+$router->get('/members', 'MemberController@index');
+$router->post('/member', 'MemberController@store');
+$router->get('/member/{id}', 'MemberController@show');
+$router->put('/member/{id}', 'MemberController@update');
+$router->delete('/member/{id}', 'MemberController@destroy');
