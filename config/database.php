@@ -41,6 +41,12 @@ return [
             'database' => 'sera-test',
         ],
 
+        'sqlite' => [
+            'driver' => 'sqlite',
+            'database' => database_path('database.sqlite'),
+            'prefix' => env('DB_PREFIX', ''),
+        ],
+
         
 
     ],

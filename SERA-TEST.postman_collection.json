@@ -1,0 +1,642 @@
+{
+	"info": {
+		"_postman_id": "4b9326ef-92a7-4262-9f9a-be8af8087b29",
+		"name": "SERA-TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "Get All Data Member",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8009/members",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8009",
+							"path": [
+								"members"
+							]
+						},
+						"description": "Fetch all data from database"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Data Member",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Hendro kartiko\",\r\n     \"phone\":\"1236678456\",\r\n     \"email\":\"email@email.com\",\r\n     \"address\":\"Jakarta Kramat Jati\"\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/member",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"member"
+							]
+						},
+						"description": "Create data member"
+					},
+					"response": []
+				},
+				{
+					"name": "Show Detail Member",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8000/member/601cb33eb1040000d3005b12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"member",
+								"601cb33eb1040000d3005b12"
+							]
+						},
+						"description": "Show data detil member"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Data Member",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Hendro\",\r\n     \"phone\":\"1236678456\",\r\n     \"email\":\"email1@gmail.com\",\r\n     \"address\":\"Jakarta Tanjung Duren\"\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/member/601cc309b1040000d3005b13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"member",
+								"601cc309b1040000d3005b13"
+							]
+						},
+						"description": "Update data member from database"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Data Member",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8000/member/601cc309b1040000d3005b13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"member",
+								"601cc309b1040000d3005b13"
+							]
+						},
+						"description": "Delete data member from database"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Firebase",
+			"item": [
+				{
+					"name": "Get All Data Course",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8000/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"courses"
+							]
+						},
+						"description": "Fetch all data from database"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Data Course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"PHP Advance\",\r\n     \"level\":\"intermediete\",\r\n     \"benefit\":\"Bisa langsung buat web sendiri\"\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"course"
+							]
+						},
+						"description": "Create data member"
+					},
+					"response": []
+				},
+				{
+					"name": "Show Detail Course",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8000/course/-MSkUT3ZbNhd6Wu73iMX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"course",
+								"-MSkUT3ZbNhd6Wu73iMX"
+							]
+						},
+						"description": "Show data detil member"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Data Course",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"PHP Advance\",\r\n     \"level\":\"master\",\r\n     \"benefit\":\"Bisa langsung buat web sendiri\"\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/course/-MSkUT3ZbNhd6Wu73iMX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"course",
+								"-MSkUT3ZbNhd6Wu73iMX"
+							]
+						},
+						"description": "Update data member from database"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Data Course",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8000/course/-MSkUT3ZbNhd6Wu73iMX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"course",
+								"-MSkUT3ZbNhd6Wu73iMX"
+							]
+						},
+						"description": "Delete data member from database"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Hiero Nabit",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "roninabit@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "arsenal",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "arsenal",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8009/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8009",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "roninabit@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "arsenal",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8009/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8009",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDkvYXBpL2xvZ2luIiwiaWF0IjoxNjEyNTU4NDU1LCJleHAiOjE2MTI1NjIwNTUsIm5iZiI6MTYxMjU1ODQ1NSwianRpIjoiSWNCaVdjYlFCanV5YXRNZyIsInN1YiI6IjYwMWRhZGMyMmM1NDAwMDBhMDAwN2YxMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.eirYsirLaGnBPYJqv5vzzepgNn3_XDwgdQTmutD0nyk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8009/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8009",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sow profile using token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDkvYXBpL2xvZ2luIiwiaWF0IjoxNjEyNTU4NDU1LCJleHAiOjE2MTI1NjIwNTUsIm5iZiI6MTYxMjU1ODQ1NSwianRpIjoiSWNCaVdjYlFCanV5YXRNZyIsInN1YiI6IjYwMWRhZGMyMmM1NDAwMDBhMDAwN2YxMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.eirYsirLaGnBPYJqv5vzzepgNn3_XDwgdQTmutD0nyk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8009/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8009",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDkvYXBpL2xvZ2luIiwiaWF0IjoxNjEyNTYwMzExLCJleHAiOjE2MTI1NjM5MTEsIm5iZiI6MTYxMjU2MDMxMSwianRpIjoiMkJKb0RzOFBYNTRjUFNDNCIsInN1YiI6IjYwMWRhZGMyMmM1NDAwMDBhMDAwN2YxMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7YlCzFEnGhUEbb7y7a2RT80850ADvt53zBJUUkFY848",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "beraer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDkvYXBpL2xvZ2luIiwiaWF0IjoxNjEyNTYwMzExLCJleHAiOjE2MTI1NjM5MTEsIm5iZiI6MTYxMjU2MDMxMSwianRpIjoiMkJKb0RzOFBYNTRjUFNDNCIsInN1YiI6IjYwMWRhZGMyMmM1NDAwMDBhMDAwN2YxMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7YlCzFEnGhUEbb7y7a2RT80850ADvt53zBJUUkFY848",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8009/api/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8009",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Filter Data ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8009/filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Regiester",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \"email\": \"eve.holt@reqres.in\",\r\n \"password\": \"pistol\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8009/register-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"register-user"
+					]
+				},
+				"description": "Register user via API"
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \"email\": \"eve.holt@reqres.in\",\r\n \"password\": \"pistol\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8009/login-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"login-user"
+					]
+				},
+				"description": "Login via APi"
+			},
+			"response": []
+		}
+	]
+}

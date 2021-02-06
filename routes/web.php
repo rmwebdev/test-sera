@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\IntegrasiController;
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
@@ -19,6 +17,11 @@ use App\Http\Controllers\IntegrasiController;
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+// $router->get('/test', function () use ($router) {
+//     return view('index');
+// });
+
 
 // Soal no 1.
 $router->get('/members', 'MemberController@index');
