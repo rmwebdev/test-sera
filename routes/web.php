@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IntegrasiController;
 
 /** @var \Laravel\Lumen\Routing\Router $router */
@@ -36,6 +37,22 @@ $router->delete('course/{id}', 'FirebaseCrudController@destroy');
 
 // Soal no 6
 
-$router->post('register', 'IntegrasiController@register');
-$router->post('login', 'IntegrasiController@login');
+$router->post('register-user', 'IntegrasiController@register');
+$router->post('login-user', 'IntegrasiController@login');
+
+// Soal no 7
 $router->get('filter', 'IntegrasiController@filter');
+
+
+// Soal no 2
+
+$router->group(['prefix' => 'api'], function () use ($router) {
+   $router->post('register', 'AuthController@register');
+   $router->post('login', 'AuthController@login');
+   $router->post('logout', 'UserController@logout');
+   $router->get('profile', 'UserController@profile');
+   $router->get('users/{id}', 'UserController@singleUser');
+   $router->get('users', 'UserController@allUsers');
+});
+
+
